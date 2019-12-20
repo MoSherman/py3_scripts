@@ -5,8 +5,6 @@ import re
 import name_dict
 
 def hacker_name():
-    name_entered = False
-    name_valid   = False
     valid_names = ['']
     print(" \nThis script can tell you your Hacker Name!")
     usr_name = input("What is your name (FirstName LastName)?: ")
@@ -15,9 +13,13 @@ def hacker_name():
 
     if len(usr_name) >= 2:
         name_entered = True
+    else:
+        name_entered = False
  
     if '' not in valid_names:
         name_valid = True
+    else:
+        name_valid = False
 
     while name_entered is False or name_valid is False:
         name_entered = False
